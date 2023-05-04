@@ -1,7 +1,9 @@
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Navbar from "./components/Navbar";
+import About from "./components/about/About";
+import BestSeller from "./components/bestseller/BestSeller";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import Navbar from "./components/navbar/Navbar";
+import LogIn from "./features/LogIn/LogIn";
 
 function App() {
   return (
@@ -9,7 +11,9 @@ function App() {
       <Navbar />
       <Header />
       <About />
+      <BestSeller/>
       <Footer />
+      {/* <LogIn /> */}
     </>
   );
 }
