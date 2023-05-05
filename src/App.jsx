@@ -1,19 +1,26 @@
-import About from "./components/about/About";
-import BestSeller from "./components/bestseller/BestSeller";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Navbar from "./components/navbar/Navbar";
-import LogIn from "./features/LogIn/LogIn";
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import loadable from "@loadable/component";
+const HomePage = loadable(() => import("./features/home/HomePage"));
+const Product = loadable(() => import("./features/product/Product"));
+const Blog = loadable(() => import("./features/blog/Blog"));
+
+const LogIn = loadable(() => import("./features/login/LogIn"));
 
 function App() {
   return (
     <>
-      {/* <Navbar />
-      <Header />
-      <About />
-      <BestSeller/>
-      <Footer /> */}
-      <LogIn />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage fallback={<>Loading...</>} />} />
+          <Route
+            path="/product"
+            element={<Product fallback={<>Loading...</>} />}
+          />
+          <Route path="/blog" element={<Blog fallback={<>Loading...</>} />} />
+          <Route path="/login" element={<LogIn fallback={<>Loading...</>} />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

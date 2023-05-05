@@ -1,6 +1,6 @@
 import React from "react";
-import style from "./navbar.module.scss"
-
+import style from "./navbar.module.scss";
+import { NavLink } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 
 export default function Navbar() {
@@ -28,23 +28,19 @@ export default function Navbar() {
             <div className="collapse navbar-collapse" id="navbarsExample04">
               <ul className="navbar-nav me-auto mb-2 mb-md-0 ms-5">
                 <li className="nav-item">
-                  <a
-                    className="nav-link pe-4 active"
-                    aria-current="page"
-                    href="#"
-                  >
+                  <NavLink className="nav-link pe-4" to="/">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-4" href="#">
+                  <NavLink className="nav-link pe-4" to="/product">
                     Product
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link pe-4" href="#">
-                    Contact
-                  </a>
+                  <NavLink className="nav-link pe-4" to="/blog">
+                    Blog
+                  </NavLink>
                 </li>
               </ul>
               <ul className="navbar-nav ms-auto mb-2 mb-md-0 ms-5">
@@ -57,9 +53,9 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active px-3" href="#">
+                  <NavLink to='/login'className="nav-link px-3">
                     Log out
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
