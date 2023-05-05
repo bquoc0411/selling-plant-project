@@ -6,7 +6,7 @@ import img3 from "../../asset/header-3.jpeg";
 export default function Header() {
   return (
     <>
-      <div id="carouselExampleCaptions" className="carousel slide">
+      <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
         <div className="carousel-indicators">
           <button
             type="button"
@@ -30,21 +30,21 @@ export default function Header() {
           ></button>
         </div>
         <div className="carousel-inner">
-          <div className="carousel-item active">
+          <div className="carousel-item active" data-bs-interval="4000">
             <img src={img1} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1>GREENMIND</h1>
               <p>A community for plant lovers</p>
             </div>
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" data-bs-interval="4000">
             <img src={img2} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1>Discover the magic of plants</h1>
               <p>Many different types of products with best pricing</p>
             </div>
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" data-bs-interval="4000">
             <img src={img3} className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1>Green workspace</h1>

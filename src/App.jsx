@@ -8,12 +8,12 @@ import LogIn from "./features/LogIn/LogIn";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar />
       <Header />
       <About />
       <BestSeller/>
-      <Footer />
-      {/* <LogIn /> */}
+      <Footer /> */}
+      <LogIn />
     </>
   );
 }
