@@ -1,5 +1,5 @@
 import React from "react";
-const userFeedBack = [
+const userFeedBackList = [
   {
     name: "Thuc Anh Nguyen",
     feedback:

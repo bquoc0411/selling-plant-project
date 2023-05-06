@@ -1,11 +1,18 @@
 import React from "react";
 import style from "./signin.module.scss";
 import logo from "../../asset/favicon.ico";
+import { useNavigate } from "react-router-dom";
 
 export default function LogIn() {
+  const navigate = useNavigate()
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    navigate('/homepage')
+  }
+  
   return (
     <div className={`text-center ${style.ownStyleForm}`}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <img className="mb-4" src={logo} alt="" width="72" height="57" />
         <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
 
