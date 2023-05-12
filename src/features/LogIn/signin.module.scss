@@ -13,5 +13,12 @@
     width: 450px;
     padding: 16px;
     border-radius: 8px;
+
+    .err{
+      color: red;
+      display: flex;
+      align-items: start;
+    }
   }
+  
 }

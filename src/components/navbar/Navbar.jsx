@@ -53,7 +53,7 @@ export default function Navbar() {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <NavLink to='/login'className="nav-link px-3">
+                  <NavLink to='/'className="nav-link px-3">
                     Log out
                   </NavLink>
                 </li>
