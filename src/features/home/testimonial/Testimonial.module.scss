@@ -1,0 +1,15 @@
+@import "../../../../scss/variable.module.scss";
+
+.backgroudColor{
+    background-color: $backgroundColor;
+    padding: 48px 0 96px 0;
+    margin-top: 48px;
+    .quote{
+        width: 40px;
+    }
+    .userImg{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+    }
+}

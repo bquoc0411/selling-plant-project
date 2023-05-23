@@ -4,8 +4,9 @@ import bestSellerItemList from "./data";
 export default function BestSeller() {
   return (
     <>
-      <div className="container">
-        <h2 className="text-center pb-3">Best seller in GREENMIND</h2>
+      <div className="container pt-5 mt-5">
+        <h1 className="text-center">Best seller in GREENMIND</h1>
+        <p className="text-center"> Our selection of beautiful plants will add life and vibrancy to your home</p>
         <div className="row">
           {bestSellerItemList
             ? bestSellerItemList.map((item) => {

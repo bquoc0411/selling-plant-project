@@ -1,6 +1,8 @@
-.footer{
-    background-color: #C1DCDC;
+@import "../../../scss/variable.module.scss";
 
+.footer{
+    background-color: $backgroundColor;
+    margin-top: 96px;
     h2{
         font-family: 'Roboto Slab', serif;
     }
@@ -18,6 +20,6 @@
         }
     }
     .footerDescription{
-        color: #9c9c9c;   
+        font-weight: 700;   
     }
 }
