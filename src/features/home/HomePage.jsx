@@ -5,6 +5,7 @@ import BestSeller from "../../components/bestseller/BestSeller";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/header/Header";
 import Testimonial from "./testimonial/Testimonial";
+import HomeBlog from "./homeblog/HomeBlog";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <About />
       <BestSeller />
       <Testimonial />
+      <HomeBlog />
       <Footer />
     </>
   );
