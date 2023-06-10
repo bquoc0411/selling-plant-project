@@ -1,4 +1,3 @@
-import React from "react";
 import { TbPlant } from "react-icons/tb";
 import { BsBoxSeam, BsTelephoneOutbound } from "react-icons/bs";
 

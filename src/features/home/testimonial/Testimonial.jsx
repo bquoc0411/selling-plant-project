@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Testimonial.module.scss";
 import userFeedBackList from "./data.js";
-import quote from "../../../asset/testimonial/quote.svg";
+import quote from "../../../assets/testimonial/quote.svg";
 
 export default function Testmonial() {
   return (
@@ -13,7 +13,7 @@ export default function Testmonial() {
           <div className="row">
             {userFeedBackList.map((user) => {
               return (
-                <div className="col-lg-4 col-md-12 col-sm-12 pt-3">
+                <div className="col-lg-4 col-md-12 col-sm-12 pt-3" key={user.id}>
                   <div className="card h-100 p-3">
                     <div className="d-flex align-items-center">
                       <img src={quote} className={style.quote} />

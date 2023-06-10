@@ -1,7 +1,7 @@
 import React from "react";
-import img1 from "../../asset/header-1.jpeg";
-import img2 from "../../asset/header-2.jpeg";
-import img3 from "../../asset/header-3.jpeg";
+import img1 from "../../assets/header-1.jpeg";
+import img2 from "../../assets/header-2.jpeg";
+import img3 from "../../assets/header-3.jpeg";
 
 export default function Header() {
   return (

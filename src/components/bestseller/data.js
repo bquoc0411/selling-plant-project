@@ -1,6 +1,6 @@
-import img1 from "../../asset/best-seller/item1.jpg";
-import img2 from "../../asset/best-seller/item2.jpg";
-import img3 from "../../asset/best-seller/item3.jpg";
+import img1 from "../../assets/best-seller/item1.jpg";
+import img2 from "../../assets/best-seller/item2.jpg";
+import img3 from "../../assets/best-seller/item3.jpg";
 
 const bestSellerItemList = [
   {

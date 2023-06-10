@@ -1,0 +1,12 @@
+.minHeight{
+    min-height: 500px;
+    .position{
+        top: 0;
+        right: 0; 
+    }
+    .sale {
+        text-decoration: line-through;
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+

@@ -1,0 +1,18 @@
+.blogimg{
+    width: 100%;
+    margin-bottom: 24px;
+    &:hover{
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}
+.postTitle{
+    margin: 32px 0 24px 0;
+    border-bottom: 3px solid transparent;
+    display: inline-block;
+    transition: 0.5s all;
+    &:hover{
+        border-color: #000;
+        cursor: pointer;
+    }
+}

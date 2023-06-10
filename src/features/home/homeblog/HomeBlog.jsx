@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./HomeBlog.module.scss";
 import { horizontalBlog, verticalBlog } from "./data";
+import { Link } from "react-router-dom";
 
 export default function HomeBlog() {
   return (
@@ -8,7 +9,7 @@ export default function HomeBlog() {
       <div className={`container ${style.homeBlogContainer}`}>
         <h1 className="text-center">Blog</h1>
         <p className="text-center">
-          Don't know how to start? Visit our blog for more perfect idea
+          Don't know how to start? Visit our <Link to={"/blog"}>blog</Link> for more perfect idea
         </p>
         <div className="row">
           {horizontalBlog.map((item) => {
@@ -36,10 +37,10 @@ export default function HomeBlog() {
                 <div className="card shadow-sm">
                   <div className="card-body">
                     <div className="row">
-                      <div className="col-lg-3 col-md-3">
+                      <div className="col-lg-3 col-md-6">
                         <img src={item.img} style={{ width: "100%" }} />
                       </div>
-                      <div className="col-lg-9 col-md-9">
+                      <div className="col-lg-9 col-md-6">
                         <h5>{item.title}</h5>
                         <p>
                           {item.description}...{" "}

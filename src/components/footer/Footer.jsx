@@ -1,11 +1,18 @@
 import React from "react";
-import style from "./footer.module.scss"
+import style from "./footer.module.scss";
 
 import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { SiShopee } from "react-icons/si";
 
+import { useSelector, useDispatch } from "react-redux";
+import { incrementByAmount } from "../../redux/actions/counterSlice";
+
 export default function Footer() {
+  // const count = useSelector((state) => state.changeValue);
+  // const dispatch = useDispatch();
+  // console.log(count);
+
   return (
     <footer className={`${style.footer}`}>
       <div className="container py-5">
@@ -14,13 +21,19 @@ export default function Footer() {
             <h2>GREENMIND</h2>
             <p>We help you find your dream plant</p>
             <div className="d-flex justify-content-evenly">
-              <div className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}>
+              <div
+                className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}
+              >
                 <FaFacebookF />
               </div>
-              <div className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}>
+              <div
+                className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}
+              >
                 <AiFillInstagram />
               </div>
-              <div className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}>
+              <div
+                className={`${style.footerNetworkIcon} px-2 py-2 d-flex align-items-center justify-content-center`}
+              >
                 <SiShopee />
               </div>
             </div>
@@ -49,7 +62,9 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className={`text-center ${style.footerDescription}`}>© 2023 GREENMIND. All right reserved</div>
+        <div className={`text-center ${style.footerDescription}`}>
+          © {new Date().getFullYear()} GREENMIND. All right reserved
+        </div>
       </div>
     </footer>
   );

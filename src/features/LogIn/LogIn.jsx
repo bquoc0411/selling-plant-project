@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./signin.module.scss";
-import logo from "../../asset/favicon.ico";
+import logo from "../../assets/favicon.ico";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -52,7 +52,7 @@ export default function LogIn() {
     <div className={`text-center ${style.ownStyleForm}`}>
       <form onSubmit={handleSubmit(onSubmit)} >
         <img className="mb-4" src={logo} alt="" width="72" height="57" />
-        <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+        <h1 className="h3 mb-3 fw-normal">Please log in</h1>
 
         <div className="form-floating mb-1" >
           <input
