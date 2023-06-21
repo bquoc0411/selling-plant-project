@@ -2,9 +2,12 @@ import React from "react";
 import style from "./Items.module.scss";
 import { FcSearch, FcFilledFilter } from "react-icons/fc";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { searchQuery } from "../../../redux/actions/filter/filterItemsSlice";
 
 
-const Items = ({ name, categories }) => {
+const Items = ({ name, categories, filterLowPrice, filterMiddlePrice, filterHighPrice, returnAll, handleSubmit, handleOnchange}) => {
+
   return (
     <>
       <div className={`container ${style.minHeight}`} >
@@ -12,15 +15,18 @@ const Items = ({ name, categories }) => {
         <div className="row">
           <div className="col-lg-6">
             <div className="mb-4">
-              <label for="searchItem" className="form-label">
+            <form onSubmit={handleSubmit}>
+            <label htmlFor="searchItem" className="form-label">
                 <FcSearch /> Let's find your favorite plant
               </label>
               <input
-                type="email"
+                type="text"
                 className="form-control"
                 id="searchItem"
-                placeholder="Eg: rosemary"
+                placeholder="Eg: zz plant"
+                onChange={handleOnchange}
               />
+            </form>
             </div>
           </div>
           <div className="col-lg-6 d-flex align-items-end">
@@ -35,20 +41,25 @@ const Items = ({ name, categories }) => {
                   <FcFilledFilter /> Filter by price {" "}
                 </button>
                 <ul className="dropdown-menu">
-                  <li>
-                    <a className="dropdown-item" href="#">
+                <li onClick={returnAll}>
+                    <div className="dropdown-item">
+                      All
+                    </div>
+                  </li>
+                  <li onClick={filterLowPrice}>
+                    <div className="dropdown-item">
                       0-30$
-                    </a>
+                    </div>
                   </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
+                  <li onClick={filterMiddlePrice}>
+                    <div className="dropdown-item">
                       30-70$
-                    </a>
+                    </div>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <div onClick={filterHighPrice} className="dropdown-item">
                       More than 70$
-                    </a>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -56,7 +67,7 @@ const Items = ({ name, categories }) => {
           </div>
         </div>
         <div className="row">
-          {categories
+          {(categories && categories.length > 0)
             ? categories.map((item) => {
                 return (
                   <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: '#000' }} className="col-lg-3 col-md-6 pb-5" key={item.id}>
@@ -81,16 +92,6 @@ const Items = ({ name, categories }) => {
                             </p>
                           ) : null}
                         </div>
-                        {/* <div className="d-flex justify-content-between align-items-center">
-                          <div className="btn-group">
-                            <button
-                              type="button"
-                              className="btn btn-sm btn-outline-dark"
-                            >
-                              Add to your cart
-                            </button>
-                          </div>
-                        </div> */}
                       </div>
                       {item.isFreeShip ? (
                         <span
@@ -103,7 +104,7 @@ const Items = ({ name, categories }) => {
                   </Link>
                 );
               })
-            : null}
+            : <p className="text-center">No Products Found</p>}
         </div>
       </div>
     </>

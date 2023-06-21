@@ -26,4 +26,4 @@ const bestSellerItemList = [
   },
 ];
 
-export default bestSellerItemList
+export default bestSellerItemList;

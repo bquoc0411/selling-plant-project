@@ -5,14 +5,7 @@ import { FaFacebookF } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import { SiShopee } from "react-icons/si";
 
-import { useSelector, useDispatch } from "react-redux";
-import { incrementByAmount } from "../../redux/actions/counterSlice";
-
 export default function Footer() {
-  // const count = useSelector((state) => state.changeValue);
-  // const dispatch = useDispatch();
-  // console.log(count);
-
   return (
     <footer className={`${style.footer}`}>
       <div className="container py-5">

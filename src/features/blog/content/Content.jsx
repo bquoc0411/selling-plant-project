@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Content.module.scss";
-import { verticalBlog } from "../../home/homeblog/data";
+import { verticalBlog } from "../../../hashdata/home/homeblog";
 
 const Content = () => {
   return (

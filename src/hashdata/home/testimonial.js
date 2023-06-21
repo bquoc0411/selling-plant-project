@@ -1,7 +1,6 @@
-import React from "react";
-import giangAva from '../../../assets/testimonial/giang.jpg'
-import hanhAva from '../../../assets/testimonial/honganh.jpg'
-import huongAva from '../../../assets/testimonial/maihuong.jpg'
+import giangAva from '../../assets/testimonial/giang.jpg'
+import hanhAva from '../../assets/testimonial/honganh.jpg'
+import huongAva from '../../assets/testimonial/maihuong.jpg'
 
 const userFeedBackList = [
   {

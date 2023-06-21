@@ -1,7 +1,7 @@
-import office from "../../../assets/homeblog/office.jpg";
-import bathroom from "../../../assets/homeblog/bathroom.jpg";
-import lovinghome from "../../../assets/homeblog/lovinghome.jpg";
-import hotel from "../../../assets/homeblog/hotel.jpg";
+import office from "../../assets/homeblog/office.jpg";
+import bathroom from "../../assets/homeblog/bathroom.jpg";
+import lovinghome from "../../assets/homeblog/lovinghome.jpg";
+import hotel from "../../assets/homeblog/hotel.jpg";
 
 const horizontalBlog = [
   {
@@ -32,11 +32,11 @@ const horizontalBlog = [
   },
 ];
 
-import mistake from "../../../assets/homeblog/mistake.jpg";
-import unkillable from "../../../assets/homeblog/unkillable.jpg";
-import water from "../../../assets/homeblog/water.jpg";
-import growavocado from "../../../assets/homeblog/growavocado.jpg";
-import kitchen from "../../../assets/homeblog/kitchen.jpg";
+import mistake from "../../assets/homeblog/mistake.jpg";
+import unkillable from "../../assets/homeblog/unkillable.jpg";
+import water from "../../assets/homeblog/water.jpg";
+import growavocado from "../../assets/homeblog/growavocado.jpg";
+import kitchen from "../../assets/homeblog/kitchen.jpg";
 
 const verticalBlog = [
   {

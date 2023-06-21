@@ -1,5 +1,5 @@
 import React from "react";
-import bestSellerItemList from "./data";
+import bestSellerItemList from "../../hashdata/home/bestSeller";
 
 export default function BestSeller() {
   return (

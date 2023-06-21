@@ -1,5 +1,5 @@
 import React from "react";
-import feature from "./data";
+import feature from "../../hashdata/home/aboutUs";
 import style from "./about.module.scss";
 
 export default function About() {

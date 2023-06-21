@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Testimonial.module.scss";
-import userFeedBackList from "./data.js";
+import userFeedBackList from "../../../hashdata/home/testimonial";
 import quote from "../../../assets/testimonial/quote.svg";
 
 export default function Testmonial() {

@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./HomeBlog.module.scss";
-import { horizontalBlog, verticalBlog } from "./data";
+import { horizontalBlog, verticalBlog } from "../../../hashdata/home/homeblog";
 import { Link } from "react-router-dom";
 
 export default function HomeBlog() {

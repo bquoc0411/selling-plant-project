@@ -5,6 +5,8 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { useDispatch, useSelector } from "react-redux";
+import { addUser } from "../../redux/actions/loginSlice/loginSlice";
 
 export default function LogIn() {
   //Declare useForm and use Navigate
@@ -43,18 +45,22 @@ export default function LogIn() {
     resolver: yupResolver(SignupSchema),
   });
 
+  const dispatch = useDispatch();
+
+
   const onSubmit = (data) => {
-    console.log(JSON.parse(JSON.stringify(data)));
-    navigate("/homepage");
+    const user = JSON.parse(JSON.stringify(data));
+    dispatch(addUser(user))
+    navigate("/");
   };
 
   return (
     <div className={`text-center ${style.ownStyleForm}`}>
-      <form onSubmit={handleSubmit(onSubmit)} >
+      <form onSubmit={handleSubmit(onSubmit)}>
         <img className="mb-4" src={logo} alt="" width="72" height="57" />
         <h1 className="h3 mb-3 fw-normal">Please log in</h1>
 
-        <div className="form-floating mb-1" >
+        <div className="form-floating mb-1">
           <input
             {...register("name", { required: true })}
             type="text"
